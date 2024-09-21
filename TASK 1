@@ -1,0 +1,37 @@
+def add(x,y):
+    return x+y
+def sub(x,y):
+    return x-y
+def multi(x, y):
+    return x*y
+def div(x,y):
+    if y!= 0:
+        return x/y
+    else:
+        print("Not Defined")
+def calculator():
+    print("Welcome to the Calculator")
+    print("Choose the Arithmetic Operator")
+    print("1. Add")
+    print("2. Substract")
+    print("3. Multipy")
+    print("4. Divide")
+    
+    choice = input("Choose the operator symbol('+' or '-' or '*' or '/'):")
+    if choice in ['+', '-', '*', '/']:
+        n1 = int(input("Enter the value of 1st digit:"))
+        n2 = int(input("Enter the value of 2nd digit:"))
+        
+        if choice == '+':
+            print(f"{n1} + {n2} = {add(n1, n2)}")
+        elif choice == '-':
+            print(f"{n1} - {n2} = {sub(n1, n2)}")
+        elif choice == '*':
+            print(f"{n1} * {n2} = {multi(n1, n2)}")
+        elif choice == '/':
+            print(f"{n1} / {n2} = {div(n1, n2)}")
+            
+    else:
+        print("Invalid Input")
+        
+calculator()
